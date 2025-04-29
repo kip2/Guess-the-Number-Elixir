@@ -1,5 +1,5 @@
 defmodule Main do
-  def main do
+  def main(_args \\ []) do
     # print logo
     print_logo()
 
