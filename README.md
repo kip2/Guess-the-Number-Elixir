@@ -18,13 +18,13 @@ You can play it directly from the command line.
 
 ----- START GAME -------
 
-Enter a number: 50
-The number is higher.
-Enter a number: 25
-The number is higher.
-Enter a number: 12
-The number is higher.
-Enter a number: 
+数字を入力してください: 50
+数字が大きいです
+数字を入力してください: 25
+数字が大きいです
+数字を入力してください: 12
+数字が大きいです
+数字を入力してください: 
 ```
 
 You can easily run it even if you don't have an Elixir/Erlang environment by using Docker.
