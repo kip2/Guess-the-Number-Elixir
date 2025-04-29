@@ -1,10 +1,24 @@
 defmodule Main do
   def main do
+    # print logo
+    print_logo()
+
     # The answer number.
     answer = generate_random_number()
 
     # game start
     start_game(answer)
+  end
+
+  def print_logo() do
+    IO.puts("""
+
+    ========================
+    === Guess The Number ===
+    ========================
+
+    ----- START GAME -------
+    """)
   end
 
   def start_game(answer) do
@@ -14,6 +28,7 @@ defmodule Main do
     # Number judge.
     case judge(user_input, answer) do
       :correct ->
+        IO.puts("----- GAME CLEAR! -------")
         IO.puts("正解! おめでとう!")
 
       :too_low ->
