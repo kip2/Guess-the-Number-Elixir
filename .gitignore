@@ -36,7 +36,7 @@ target
 #-----------------
 
 #----- Elixir ----
-_build/
+.elixir_ls
 # The directory Mix will write compiled artifacts to.
 /_build/
 
