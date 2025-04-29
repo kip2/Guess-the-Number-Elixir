@@ -1,13 +1,15 @@
-# Guess The Number
+[English](README.md)|[日本語](README-ja.md)
 
-Elixir製の数字あてゲームです。
+<h1 align="center"> Guess the Number </h1>
+
+A simple number-guessing game built with Elixir.
 
 ## Summary
 
-1から100の間でランダムに選ばれた数字を当てるCLIアプリケーションです。
-コマンドライン上で起動し、遊ぶことができます。
+This is a CLI application where you guess a randomly selected number between 1 and 100.  
+You can play it directly from the command line.
 
-`ゲームのイメージ`
+`Gameplay Example`
 
 ```sh
 ========================
@@ -16,90 +18,87 @@ Elixir製の数字あてゲームです。
 
 ----- START GAME -------
 
-数字を入力してください: 50
-数字が大きいです
-数字を入力してください: 25
-数字が大きいです
-数字を入力してください: 12
-数字が大きいです
-数字を入力してください: 
+Enter a number: 50
+The number is higher.
+Enter a number: 25
+The number is higher.
+Enter a number: 12
+The number is higher.
+Enter a number: 
 ```
 
-なお、Elixir/Erlang環境がなくてもDockerを使って簡単に実行できるようになっています。
+You can easily run it even if you don't have an Elixir/Erlang environment by using Docker.
 
 ## Install
 
-### Elixir/Erlang環境がある場合
+### If you already have an Elixir/Erlang environment
 
-このプロジェクトをElixir`1.16`以上で動作します。
+This project requires **Elixir 1.16 or higher** to run.
 
-Elixir/Erlang環境がすでにある場合は、そのままプロジェクトを動かすことができます。
+If you already have an Elixir/Erlang environment installed, you can run the project directly.  
+If not, please follow the instructions under "Using Docker" below.
 
-Elixir/Erlang環境がない場合は、以下の「Dockerを利用する場合」の手順に従って下さい。
+### Using Docker
 
-### Dockerを利用する場合
+You can run the project without installing Elixir/Erlang by using Docker.
 
-Elixir/Erlangをインストールせず実行できるよう、Docker対応を行っています。
-
-事前にDocker Desktopをインストールして下さい。
-(参考：[Docker Desktop - Intall guide](https://docs.docker.com/desktop/))
+Please install Docker Desktop beforehand.  
+(Reference: [Docker Desktop - Install guide](https://docs.docker.com/desktop/))
 
 ## Usage
 
-### Elixir/Erlang環境がある場合
+### If you already have an Elixir/Erlang environment
 
-1. 本プロジェクトを`git clone`、もしくはファイルダウンロードして入手します。
+1. Clone this repository or download the project files.
 
-2. プロジェクトディレクトリに移動し、起動します。
+2. Move into the project directory and start the game:
 
 ```sh
-# プロジェクトディレクトリに移動
+# Move into the project directory
 cd ./Guess-the-Number-Elixir
 
-# ゲームの起動
+# Start the game
 mix run -e "Main.main"
 ```
 
-3. 1から100までの間でランダムに割り当てられた正解の数字を入力してください。
-   ゲームを途中で終了したい場合は、`Ctrl+C`を2回入力して下さい。
+3. Try to guess the correct number assigned randomly between 1 and 100.  
+   To quit the game midway, press `Ctrl+C` twice.
 
-### Dockerを利用する場合
+### Using Docker
 
-1. DockerDesktopを起動します。
+1. Start Docker Desktop.
 
-2. 本プロジェクトを`git clone`、もしくはファイルダウンロードして入手します。
+2. Clone this repository or download the project files.
 
-3. プロジェクトディレクトリに移動します。
+3. Move into the project directory:
 
 ```sh
-# プロジェクトディレクトリに移動
 cd ./Guess-the-Number-Elixir
 ```
 
-4. シェルスクリプトに実行権限を与えて、実行します。
-   初回起動時はDockerイメージを自動ビルドし、すでにイメージが存在する場合は起動のみ行います。
+4. Grant execute permissions to the provided shell script and run it.  
+   The script will automatically build the Docker image on the first run.  
+   If the image already exists, it will skip building and directly start the container.
 
 ```sh
-# 実行権限付与
+# Grant execute permission
 chmod +x docker-run.sh
-# シェルスクリプトの実行
+# Run the shell script
 ./docker-run.sh
 ```
 
-5. 1から100までの間でランダムに割り当てられた正解の数字を入力してください。
-   ゲームを途中で終了したい場合は、`Ctrl+C`を2回入力して下さい。
+5. Try to guess the correct number assigned randomly between 1 and 100.  
+   To quit the game midway, press `Ctrl+C` twice.
 
-
-6. ゲームを終えたら、Dockerのイメージファイルを削除できます。
-   削除スクリプトを実行して下さい。
+6. After finishing the game, you can delete the created Docker image by running the provided delete script:
 
 ```sh
-# 実行権限付与
+# Grant execute permission
 chmod +x docker-image-delete.sh
-# シェルスクリプトの実行
-./docker-iamge-delete.sh
+# Run the shell script
+./docker-image-delete.sh
 ```
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE)
+This project is licensed under the [MIT License](./LICENSE).
